@@ -135,8 +135,8 @@ def render_header():
         <div style='background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%); 
                     border-radius: 20px; padding: 0.6rem 1.2rem; 
                     box-shadow: 0 4px 20px rgba(139, 92, 246, 0.5);'>
-            <span style='color: white; font-weight: 700; font-size: 0.9rem; letter-spacing: 1.5px;'>
-                &#10024; By RATNESH SINGH(Data Scientist)
+                <span style='color: white; font-weight: 700; font-size: 0.9rem; letter-spacing: 1.5px;'>
+                &#10024; By heetkumar bhalani (AI enthusiast)
             </span>
         </div>
     </div>
@@ -261,8 +261,8 @@ def render_footer():
     st.markdown("---")
     st.markdown("""
     <div style='text-align: center; color: #666; padding: 20px;'>
-        <p>Build By RATNESH SINGH(Data Scientist)</p>
+        <p>Built By heetkumar bhalani (AI enthusiast)</p>
         <p>Universal RAG Chatbot • Built with LangChain, FAISS & Streamlit</p>
-        <p>Powered by Groq LLM & HuggingFace Embeddings</p>
+        <p>Powered by Gemini LLM & HuggingFace Embeddings</p>
     </div>
     """, unsafe_allow_html=True)
