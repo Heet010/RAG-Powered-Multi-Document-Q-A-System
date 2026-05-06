@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  rag-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: rag-chatbot:latest
+    container_name: rag-chatbot
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    volumes:
+      - ./faiss_index_storage:/app/faiss_index_storage
+    restart: unless-stopped

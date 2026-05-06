@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.log
+.env
+.env.*
+.git/
+.gitignore
+faiss_index_storage/
+.venv/
+venv/
