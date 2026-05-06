@@ -199,12 +199,12 @@ def get_developer_notes():
     return """
     <div style='display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;'>
         
-        <div style='background: rgba(139, 92, 246, 0.1); padding: 1.5rem; border-radius: 16px; border: 1px solid rgba(139, 92, 246, 0.3);'>
-            <h4 style='color: #a78bfa !important; margin-top: 0;'>&#9889; Groq Integration</h4>
+        <div style='background: rgba(96, 165, 250, 0.08); padding: 1.5rem; border-radius: 16px; border: 1px solid rgba(96, 165, 250, 0.18);'>
+            <h4 style='color: #60a5fa !important; margin-top: 0;'>&#128187; Gemini Integration</h4>
             <p style='font-size: 0.95rem;'>
-                If you set <code>GROQ_API_KEY</code> in your environment, the app will automatically use Groq's high-speed inference via <code>langchain_groq</code>. 
+                When a valid <code>GEMINI_API_KEY</code> (or Google Cloud credentials) is provided, the app will prefer Google Gemini via <code>langchain_google_genai</code> for generation.
                 <br><br>
-                <strong>Fallback:</strong> If Groq is unavailable, the app falls back to OpenAI (if configured) or handles the error gracefully. For production, ensure robust fallback logic is in place.
+                <strong>Fallback:</strong> If Gemini is not available, the app will fall back to OpenAI or other configured LLMs if present. For production, ensure you configure credentials and monitor fallback behavior.
             </p>
         </div>
 
