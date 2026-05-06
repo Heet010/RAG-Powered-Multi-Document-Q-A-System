@@ -31,8 +31,22 @@ try:
 except ImportError:
     OPENAI_AVAILABLE = False
 
+try:
+    from langchain_google_genai import ChatGoogleGenerativeAI
+    GEMINI_AVAILABLE = True
+except ImportError:
+    GEMINI_AVAILABLE = False
+
+
+def _normalize_api_key(value):
+    if value is None:
+        return None
+    cleaned = value.strip()
+    return cleaned or None
+
 def get_api_keys():
     """Retrieve API keys securely"""
-    groq_key = os.environ.get("GROQ_API_KEY") or st.secrets.get("GROQ_API_KEY", None)
-    openai_key = os.environ.get("OPENAI_API_KEY") or st.secrets.get("OPENAI_API_KEY", None)
-    return bool(groq_key), bool(openai_key), groq_key, openai_key
+    groq_key = _normalize_api_key(os.environ.get("GROQ_API_KEY") or st.secrets.get("GROQ_API_KEY", None))
+    openai_key = _normalize_api_key(os.environ.get("OPENAI_API_KEY") or st.secrets.get("OPENAI_API_KEY", None))
+    gemini_key = _normalize_api_key(os.environ.get("GEMINI_API_KEY") or st.secrets.get("GEMINI_API_KEY", None))
+    return bool(groq_key), bool(openai_key), bool(gemini_key), groq_key, openai_key, gemini_key
