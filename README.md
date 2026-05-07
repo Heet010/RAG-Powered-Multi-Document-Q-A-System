@@ -155,6 +155,8 @@ CHUNK_OVERLAP = 150     # Overlap between chunks
 # Retrieval
 TOP_K = 10              # Number of chunks to retrieve
 
+```
+
 ---
 
 ## 📖 Usage Guide
