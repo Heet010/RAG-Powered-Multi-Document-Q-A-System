@@ -8,7 +8,7 @@
 
 > **Transform your PDFs into an intelligent, conversational knowledge base powered by cutting-edge AI**
 
-A production-ready **Retrieval-Augmented Generation (RAG)** system that enables natural language conversations with your PDF documents. Built with enterprise-grade technologies including LangChain, FAISS vector search, and high-speed LLM inference via Groq.
+A production-ready **Retrieval-Augmented Generation (RAG)** system that enables natural language conversations with your PDF documents. Built with enterprise-grade technologies including LangChain, FAISS vector search, and high-speed LLM inference via Gemini.
 
 ---
 
@@ -30,7 +30,7 @@ A production-ready **Retrieval-Augmented Generation (RAG)** system that enables 
 ### Core Capabilities
 - 📁 **Multi-PDF Upload** - Process single or multiple PDF documents simultaneously
 - 🔍 **Semantic Search** - FAISS-powered vector similarity search for accurate retrieval
-- 🤖 **Dual LLM Support** - Groq (ultra-fast) with OpenAI fallback
+- 🤖 **Dual LLM Support** - Gemini with Groq/OpenAI fallback
 - 📚 **Source Citations** - Every answer includes document references with page numbers
 - 💬 **Chat History** - Persistent conversation tracking with download capability
 - 🔄 **Smart Caching** - Persistent FAISS index for instant subsequent queries
@@ -50,8 +50,8 @@ A production-ready **Retrieval-Augmented Generation (RAG)** system that enables 
 | Layer | Technology | Purpose |
 |-------|-----------|---------|
 | **Frontend** | Streamlit 1.51+ | Interactive web interface |
-| **LLM** | Groq (Llama 3.3 70B) | Lightning-fast inference (2-5s response) |
-| **Fallback LLM** | OpenAI GPT-3.5 | Backup for high availability |
+| **LLM** | Gemini (2.5-Flash) | Lightning-fast inference (2-5s response) |
+| **Fallback LLM** | Groq Llama 3.3 70B/ OpenAI GPT-3.5 | Backup for high availability |
 | **Embeddings** | HuggingFace Transformers | Sentence embeddings (all-mpnet-base-v2) |
 | **Vector Store** | FAISS | High-performance similarity search |
 | **Orchestration** | LangChain 0.2.16 | RAG pipeline management |
@@ -61,7 +61,6 @@ A production-ready **Retrieval-Augmented Generation (RAG)** system that enables 
 ### Key Dependencies
 ```
 langchain==0.2.16
-langchain-groq>=0.0.1
 faiss-cpu>=1.7.4
 sentence-transformers>=2.2.2
 streamlit>=1.28.0
