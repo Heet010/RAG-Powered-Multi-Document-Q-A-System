@@ -209,19 +209,28 @@ TOP_K = 10              # Number of chunks to retrieve
 ### Directory Structure
 
 ```
-Universal-PDF-RAG-Chatbot/
-├── app.py                      # Main Streamlit application
+RAG-Powered-Multi-Document-Q-A-System/
+├── app.py                      # Streamlit entry point
+├── config.py                   # App configuration and constants
+├── document_service.py         # Document loading and processing
+├── rag_service.py              # Retrieval and answer generation logic
+├── ui_components.py            # Reusable Streamlit UI components
+├── logger.py                   # Logging setup and helpers
+├── setup.py                    # Package metadata and install config
 ├── requirements.txt            # Python dependencies
+├── docker-compose.yml          # Container orchestration
+├── Dockerfile                  # Container image definition
+├── README.md                   # Project documentation
 ├── LICENSE                     # MIT License
-├── README.md                   # This file
-├── QUICKSTART.md              # Fast setup guide
-├── .gitignore                 # Git exclusions
-├── .streamlit/
-│   └── secrets.toml           # API keys (not in git)
-├── faiss_index_storage/       # FAISS index (auto-created)
-│   ├── index.faiss
-│   └── index.pkl
-└── app.log                    # Application logs
+├── .env.example                # Example environment variables
+├── .dockerignore               # Docker build exclusions
+├── .devcontainer/              # VS Code dev container config
+├── assets/                     # UI screenshots and images
+│   ├── main.png
+│   ├── pdf_upload.png
+│   └── chat.png
+└── faiss_index_storage/        # Local FAISS index storage
+   └── index.faiss
 ```
 
 ---
