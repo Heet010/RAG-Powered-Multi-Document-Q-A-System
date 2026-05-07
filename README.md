@@ -73,7 +73,7 @@ streamlit>=1.28.0
 
 ### Main Interface
 
-https://github.com/Heet010/RAG-Powered-Multi-Document-Q-A-System/blob/main/assets/main.png
+![Main Interface](assets/main.png)
 
 **Components:**
 1. **Header** - Gradient title with author credit
@@ -83,9 +83,9 @@ https://github.com/Heet010/RAG-Powered-Multi-Document-Q-A-System/blob/main/asset
 
 ### Chat Tab
 
-https://github.com/Heet010/RAG-Powered-Multi-Document-Q-A-System/blob/main/assets/pdf_upload.png
+![PDF Upload View](assets/pdf_upload.png)
 
-https://github.com/Heet010/RAG-Powered-Multi-Document-Q-A-System/blob/main/assets/chat.png
+![Chat View](assets/chat.png)
 
 **Features:**
 - **Text Area Input** - Dark-themed query box
